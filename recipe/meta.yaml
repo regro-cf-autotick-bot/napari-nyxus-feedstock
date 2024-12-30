@@ -1,5 +1,5 @@
 {% set name = "napari-nyxus" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/PolusAI/napari-nyxus/archive/v{{ version }}.tar.gz
-  sha256: f551dd9dd899fa7b068b9e497891bb421beb57ce68d0f8c4bc0bc454e271ead3
+  sha256: 61002dffb8f1c303821c76de6b7e5c20c75257cdea30781eccba90e951423c95
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -27,7 +27,7 @@ requirements:
     - imagecodecs
     - magicgui
     - matplotlib-base
-    - napari 
+    - napari
     - napari-skimage-regionprops >=0.10.1
     - napari-workflows
     - numpy
